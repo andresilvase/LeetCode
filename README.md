@@ -8,3 +8,4 @@
 6. [Parsing A Boolean Expression - **Hard**](https://leetcode.com/problems/parsing-a-boolean-expression/description)
 7. [Roman to Integer - Easy](https://leetcode.com/problems/roman-to-integer/description/)
 8. [Shortest Sub Array - **Hard**](https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/description/)
+9. [Rotate Array - Medium](https://leetcode.com/problems/rotate-array/description/)

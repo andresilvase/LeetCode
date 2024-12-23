@@ -11,3 +11,4 @@
 9. [Rotate Array - Medium](https://leetcode.com/problems/rotate-array/description/)
 10. [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
 11. [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/description/)
+12. [Summary Ranges](https://leetcode.com/problems/summary-ranges/)

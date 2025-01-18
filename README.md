@@ -12,4 +12,4 @@
 10. [Best Time to Buy and Sell Stock - Easy](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/)
 11. [Longest Common Prefix - Easy](https://leetcode.com/problems/longest-common-prefix/description/)
 12. [Summary Ranges - Easy](https://leetcode.com/problems/summary-ranges/)
-13. [Product of Array Except Self - Medium](https://leetcode.com/problems/product-of-array-except-self/)
+13. [Product of Array Except Self - **Medium**](https://leetcode.com/problems/product-of-array-except-self/)

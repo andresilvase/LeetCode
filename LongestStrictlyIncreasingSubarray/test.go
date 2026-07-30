@@ -83,7 +83,7 @@ func main() {
 		{
 			name:     "multiple sequences with same length",
 			input:    []int{1, 2, 0, 3, 4, 0, 5, 6},
-			expected: 2,
+			expected: 3,
 		},
 		{
 			name:     "alternating values",
@@ -171,11 +171,12 @@ func main() {
 		result := StrictlyIncreasingArrayLength(test.input)
 
 		if result == test.expected {
-			fmt.Printf("Test %d: PASS\n", i+1)
+			fmt.Printf("Test %d:- PASS\n", i+1)
 		} else {
 			fmt.Printf(
-				"Test %d: FAIL | expected %d, got %d\n",
+				"Test %d: %s - FAIL | expected %d, got %d\n",
 				i+1,
+				test.name,
 				test.expected,
 				result,
 			)

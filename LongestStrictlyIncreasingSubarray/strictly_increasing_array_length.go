@@ -5,7 +5,12 @@ func StrictlyIncreasingArrayLength(nums []int) int {
 	var globalCheck = 1
 	var localCheck = 1
 
+	if len(nums) == 0 {
+		return 0
+	}
+
 	for i := range nums {
+
 		j := i + 1
 
 		if j == len(nums) {
@@ -18,7 +23,7 @@ func StrictlyIncreasingArrayLength(nums []int) int {
 			localCheck++
 		} else {
 			globalCheck = max(globalCheck, localCheck)
-			localCheck = 0
+			localCheck = 1
 		}
 	}
 

@@ -2,30 +2,23 @@ package main
 
 func StrictlyIncreasingArrayLength(nums []int) int {
 
-	var globalCheck = 1
-	var localCheck = 1
+	longest := 1
+	current := 1
 
 	if len(nums) == 0 {
 		return 0
 	}
 
-	for i := range nums {
+	for i := 1; i < len(nums); i++ {
 
-		j := i + 1
-
-		if j == len(nums) {
-			break
-		}
-
-		// fmt.Printf("nums[%d]: %d - nums[%d]: %d | localCheck: %d\n", i, nums[i], j, nums[j], localCheck)
-
-		if nums[j] > nums[i] {
-			localCheck++
+		if nums[i] > nums[i-1] {
+			current++
 		} else {
-			globalCheck = max(globalCheck, localCheck)
-			localCheck = 1
+			current = 1
 		}
+
+		longest = max(longest, current)
 	}
 
-	return max(globalCheck, localCheck)
+	return longest
 }

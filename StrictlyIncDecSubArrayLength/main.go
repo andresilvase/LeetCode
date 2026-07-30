@@ -3,13 +3,12 @@ package main
 import "fmt"
 
 func StrictlyIncreasingArrayLength(nums []int) int {
-
-	longest := 1
-	current := 1
-
 	if len(nums) == 0 {
 		return 0
 	}
+
+	longest := 1
+	current := 1
 
 	for i := 1; i < len(nums); i++ {
 
@@ -26,13 +25,12 @@ func StrictlyIncreasingArrayLength(nums []int) int {
 }
 
 func StrictlyDecreasingArrayLength(nums []int) int {
-
-	longest := 1
-	current := 1
-
 	if len(nums) == 0 {
 		return 0
 	}
+
+	longest := 1
+	current := 1
 
 	for i := 1; i < len(nums); i++ {
 
@@ -49,33 +47,33 @@ func StrictlyDecreasingArrayLength(nums []int) int {
 }
 
 func BothIncAndDec(nums []int) int {
-	longest := 1
-	shortest := 1
-	currentLongest := 1
-	currentShortest := 1
-
 	if len(nums) == 0 {
 		return 0
 	}
 
+	longestInc := 1
+	longestDec := 1
+	currentInc := 1
+	currentDec := 1
+
 	for i := 1; i < len(nums); i++ {
 
 		if nums[i] > nums[i-1] {
-			currentLongest++
-			currentShortest = 1
+			currentInc++
+			currentDec = 1
 		} else if nums[i] < nums[i-1] {
-			currentShortest++
-			currentLongest = 1
+			currentDec++
+			currentInc = 1
 		} else {
-			currentLongest = 1
-			currentShortest = 1
+			currentInc = 1
+			currentDec = 1
 		}
 
-		shortest = max(shortest, currentShortest)
-		longest = max(longest, currentLongest)
+		longestDec = max(longestDec, currentDec)
+		longestInc = max(longestInc, currentInc)
 	}
 
-	return max(longest, shortest)
+	return max(longestInc, longestDec)
 }
 
 func submitCodeFor(challengeName string, testSet []TestCase, solution func([]int) int) {
@@ -85,7 +83,7 @@ func submitCodeFor(challengeName string, testSet []TestCase, solution func([]int
 		result := solution(test.input)
 
 		if result == test.expected {
-			fmt.Printf("Test %d:- PASS\n", i+1)
+			fmt.Printf("Test %d: - PASS\n", i+1)
 		} else {
 			fmt.Printf(
 				"Test %d: %s - FAIL | expected %d, got %d\n",
